@@ -1,0 +1,24 @@
+# First test
+## Wiring
+For the first basic test I opted for the Arduino MEGA 2560 as the controller for the TJC4024T032_001 LCD screen.
+As a first test, the Arduino was flashed with an empty sketch.
+
+The LCD screen has 1 terminal with 4 pins (+5V/TX/RX/GND). The power pins (+5V/GND) can be connected to the Arduino power pins to power up the LCD screen.
+The serial pins of the LCD screen (TX/RX) can be connected to the serial pins of the Arduino. Notice that the RX pin of the LCD must be connected to the TX pin of the Arduino and the TX of the LCD screen must be connected to the RX pin of the Arduino.
+
+When connecting the Arduino via its USB port to a computer, the LCD will light up and the standard Kodama interface will launch.
+
+## Basic interaction
+When opening the terminal within arduino and setting its baudrate to 115200 the LCD screen will respond with the message 'M105'
+This messages will continue to repeat at approx. 4 seconds.
+When the standard Kodama interface launches, it displays 3 icon buttons and 1 menu button. On the Left, a time indicator can be found.
+
+### Pressing the Temperature icon button
+When pressing the temperature icon button, a popup screen will appear to adjust the (?nozzle/bed?) temperature.
+The '-' and '+' button will send the  GCODE M104 command with the adjust temperature parameters (e.g. M104 S50).
+(Notice that when the popup screen appears, the GCODE M105 command will not be repeatedly transmitted.)
+
+### Pressing the Speed icon button
+Consistent with the 'temperature icond button', the 'speed icon button' will popup a screen where the overal print speed can be adjusted.
+The '-' and '+' button will send the GCODE M220 command with the adjusted speed parameter.
+(Notice that when the popup screen appears, the GCODE M105 command will not be repeatedly transmitted.)
