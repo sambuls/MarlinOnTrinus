@@ -1,7 +1,7 @@
 # First test
 ## Wiring
 For the first basic test I opted for the Arduino MEGA 2560 as the controller for the TJC4024T032_001 LCD screen.
-As a first test, the Arduino was flashed with an empty sketch.
+The Arduino was flashed with an empty sketch.
 
 The LCD screen has 1 terminal with 4 pins (+5V/TX/RX/GND). The power pins (+5V/GND) can be connected to the Arduino power pins to power up the LCD screen.
 The serial pins of the LCD screen (TX/RX) can be connected to the serial pins of the Arduino. Notice that the RX pin of the LCD must be connected to the TX pin of the Arduino and the TX of the LCD screen must be connected to the RX pin of the Arduino.
